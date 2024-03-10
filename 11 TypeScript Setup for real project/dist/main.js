@@ -1,3 +1,11 @@
 "use strict";
-console.log("This is typescript code");
-console.log("This is also typescript code");
+/************** Class in Typescript **********************/
+class User {
+    constructor(email, name) {
+        this.city = "";
+        this.email = email;
+        this.name = name;
+    }
+}
+const arun = new User("arun@aj.com", "arun");
+// arun.city = "Rohtak";  => not allowed
