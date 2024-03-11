@@ -14,6 +14,8 @@
 class User {
   private _courseCount = 1; // default value, can't access and manipulate outside the class, we need getter and setter for that!
 
+  protected _userId = 2; // only accessible within the class and other class which inherit that User class
+
   readonly city: string = "";
   constructor(
     public email: string,
@@ -30,6 +32,14 @@ class User {
 
   set courseCount(courseNum) {
     this._courseCount = courseNum;
+  }
+}
+
+class SubUser extends User {
+  isSubUser: boolean = true;
+
+  changeUserId() {
+    this._userId = 5;
   }
 }
 
