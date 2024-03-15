@@ -449,3 +449,64 @@
 // };
 
 // getData("name");
+
+// ************************ Utility Types ***************************
+
+// 1. Partial Type
+
+// type User = {
+//   name: string,
+//   email: string,
+// }
+
+// type User2 = Partial<User>  // optional
+
+// 2. Required Type => opposite of partial
+
+// type User = {
+//   name?: string;
+//   email?: string;
+// };
+
+// type User2 = Required<User>  // all required
+
+// 3. Readonly
+
+// ************************ Generics (Custom Type) ***************************
+
+// const func = (n: any): any => {
+//   return n;
+// }
+
+// const num = func(20);
+// const str = func("abc");
+// const bool = func(true);
+
+// Note::: We know that we don't have to use any type
+
+// use generic if you want to use multiple types at same time
+
+// Generic => <T>
+// const func = <T>(n: T): T => {
+//   return n;
+// };
+
+// // this T can be any thing, like a,b, Custom, any what you want, but as per standart T is better;
+
+// const num = func<number>(20);
+// const str = func<string>("abc");
+// const bool = func<boolean>(true);
+
+// interface Person {
+//   name: string;
+//   age: number;
+// }
+
+// const person: Person = {
+//   name: "Arun",
+//   age: 100,
+// };
+
+// const ans = func<Person>(person);
+// ans.age;
+// ans.name;
