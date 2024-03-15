@@ -21,7 +21,6 @@
 // let isLoading: boolean = true;
 // isLoading = false;
 
-
 // ********************************** Any Type ****************************
 
 // let num; // type: any
@@ -44,7 +43,6 @@
 
 // data = fetchData(); // that string type always ask for string data only
 
-
 // ***********************  Type Alias **********************
 
 // type User = {
@@ -52,15 +50,15 @@
 //     email: string;
 //     isAdmin: boolean;
 //   };
-  
+
 //   const user: User = {
 //     name: "akshay",
 //     email: "akshay@kumar.dev",
 //     isAdmin: true,
 //   };
-  
+
 //   // pretty usecase of type alias with objects
-  
+
 //   // function createUser({
 //   //     name,
 //   //     email,
@@ -72,16 +70,16 @@
 //   //   }): object {
 //   //     return {};
 //   // }
-  
+
 //   function createUser(user: User): object {
 //     user.name = "akshay";
 //     user.email = "akshay@gmail.com";
 //     user.isAdmin = true;
 //     return user;
 //   }
-  
+
 //   // readonly & optional
-  
+
 //   type User = {
 //     readonly _id: string; // nobody can touch this _id
 //     name: string;
@@ -89,38 +87,37 @@
 //     isAdmin: boolean;
 //     creditCardNumber?: number; // this field is optional, if we don't provide creditCardNumber typescript will not give any error
 //   };
-  
+
 //   let myUser: User = {
 //     _id: "123456",
 //     name: "",
 //     email: "",
 //     isAdmin: false,
 //   };
-  
+
 //   myUser.name = "abc";
 //   myUser.email = "abc@gmail.com";
 //   // myUser._id = "abc@123"  // error because of read only property
-  
+
 //   // Qs: If id is an array and we applied readonly then on push method, it gives error or not?
-  
+
 //   type testObj = {
 //     readonly id: string[];
 //   };
-  
+
 //   let testId: testObj = { id: ["a", "b", "c"] };
-  
+
 //   // now these are mutable and no error occured!!
 //   testId.id.push("abc");
 //   testId.id.pop();
 //   testId.id.pop();
-  
+
 //   // realy usecase of type alias (develop new type from previous types)
 //   type CardNumber = number;
 //   type CardDate = string;
-  
+
 //   // developing new type from previous types
 //   type CardDetails = CardDate | CardNumber | { cvv: number };
-  
 
 // *********************** Union Type ******************
 
@@ -200,7 +197,6 @@
 // mlModel.push([2]);
 // mlModel.push([3]);
 
-
 // ********************************* Objects ************************
 
 // const User = {
@@ -208,7 +204,7 @@
 //     email: "akshay@kumar.dev",
 //     isAdmin: true,
 //   };
-  
+
 //   function createUser({
 //     name,
 //     email,
@@ -220,21 +216,19 @@
 //   }): object {
 //     return {};
 //   }
-  
+
 //   createUser({ name: "akshay", email: "akshay@kumar.dev", isAdmin: true });
-  
+
 //   let newUser = { name: "", email: "", isAdmin: true, userId: "" };
-  
+
 //   // createUser({name: "", email: "", isAdmin: true, userId: ""}) -> error because of userId is not exist
-  
+
 //   createUser(newUser); // this is the nonsense behaviour of objects in typescript
-  
+
 //   // return object with specific keys
 //   function createCourse(): { courseName: string; price: number } {
 //     return { courseName: "react js", price: 3999 };
 //   }
-
-
 
 // ********************************* Tuples ************************
 
@@ -257,8 +251,6 @@
 // secureUser[0] = "xxxx"; not allowed
 // secureUser.push("..") not allowed
 
-
-
 // ********************************* Enums ************************
 
 // enum Position {
@@ -267,31 +259,30 @@
 //     Third,
 //     Fourth = 10,
 //   }
-  
+
 //   const ajPosition = Position.First;
 //   const amPositoin = Position.Fourth;
-  
 
 // ******************************** Function *****************************
 
 // function addTwo(num: number) {
 //     return num + 2;
 //   }
-  
+
 //   function getUpper(val: string) {
 //     return val.toUpperCase();
 //   }
-  
+
 //   // addTwo("4")  // error
 //   addTwo(4);
-  
+
 //   // getUpper(344)   // error
 //   getUpper("hello");
-  
+
 //   function signUpUser(name: string, email: string, isAdmin: boolean) {}
-  
+
 //   signUpUser("hello", "hello@gmail.com", true);
-  
+
 //   // default params
 //   function loginUser(name: string, email: string, isAdmin?: string) {
 //     if (typeof isAdmin !== "undefined") {
@@ -300,31 +291,30 @@
 //       // ....
 //     }
 //   }
-  
+
 //   loginUser("abc", "abc@gmail.com");
-  
+
 //   // Some better practice to use functions in typescript
-  
+
 //   function consoleErrors(errMsg: string): void {
 //     console.log(errMsg);
 //   }
-  
+
 //   const fruits = ["apple", "banana", "grapes", "oranges"];
-  
+
 //   // we want to return string[] only from map fn.
 //   fruits.map((fruit, index): string => {
 //     return `${index + 1} :: ${fruit}`;
 //   });
-  
+
 //   // never -> type
 //   // some functions never return a value :: similar to void (but different)
-  
+
 //   function handleError(errMsg: string): never {
 //     throw new Error(errMsg); // intentionaly crashed our project
-  
+
 //     // ..... sometimes stuck into infinite loop
 //   }
-  
 
 // ******************************** Interface *****************************
 
@@ -337,19 +327,19 @@
 //     startTrial(): string; // personal choice
 //     getCoupon(couponId: number): number;
 //   }
-  
+
 //   // Q: Difference between type and interface:
-  
+
 //   // 1. We can reopen interface to add further more types
 //   interface User {
 //     githubToken: string;
 //   }
-  
+
 //   // 2. interfaces can be inherit (extends)
 //   interface Admin extends User {
 //     role: "Admin" | "User" | "Manager" | "TA";
 //   }
-  
+
 //   const user: Admin = {
 //     email: "a@a.com",
 //     userId: 123,
@@ -363,8 +353,6 @@
 //     githubToken: "githubtoken",
 //     role: "Admin",
 //   };
-
-
 
 /********************************* Classes in Typescript **********************/
 
@@ -381,44 +369,57 @@
 // other way
 // class User {
 //     private _courseCount = 1; // default value, can't access and manipulate outside the class, we need getter and setter for that!
-  
+
 //     protected _userId = 2; // only accessible within the class and other class which inherit that User class
-  
+
 //     readonly city: string = "";
 //     constructor(
 //       public email: string,
 //       public name: string // public userId: string
 //     ) {}
-  
+
 //     get getGoogleEmail(): string {
 //       return `google${this.email},`;
 //     }
-  
+
 //     get courseCount(): number {
 //       return this._courseCount;
 //     }
-  
+
 //     set courseCount(courseNum) {
 //       this._courseCount = courseNum;
 //     }
 //   }
-  
+
 //   class SubUser extends User {
 //     isSubUser: boolean = true;
-  
+
 //     changeUserId() {
 //       this._userId = 5;
 //     }
 //   }
-  
+
 //   const arun = new User("arun@aj.com", "arun");
 //   const city = arun.city; // we can access it but can't modify it
-  
+
 //   // getter
 //   const courseCount = arun.courseCount;
-  
+
 //   // setter
 //   arun.courseCount = 5;
-  
-  // NOTE :: no open parenthesis required for using getter and setter
-  
+// NOTE :: no open parenthesis required for using getter and setter
+
+// ************************ Interface with Classes ***************************
+
+interface PersonInterface {
+  name: string;
+  age: number;
+  gender: string;
+}
+
+class Person implements PersonInterface {
+  constructor(public name: string, public age: number, public gender: string) {}
+}
+
+const arun = new Person("arun", 22, "male");
+arun.name, arun.gender;
