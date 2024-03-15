@@ -70,3 +70,7 @@ body {
   cursor: pointer;
   padding: 10px 18px;
 }
+
+.cutline {
+  text-decoration: line-through;
+}
