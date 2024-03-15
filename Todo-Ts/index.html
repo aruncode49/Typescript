@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + TS</title>
+  </head>
+  <body>
+    <div id="app">
+      <!-- container -->
+      <div class="container">
+        <!-- todo-form -->
+        <form class="todo-form">
+          <input type="text" placeholder="todo..." />
+          <button type="submit">Add</button>
+        </form>
+
+        <!-- todo container -->
+        <div class="todo-container">
+          <div class="todo">
+            <input type="checkbox" class="checkbox" />
+            <p class="title">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+            <button class="deleteBtn">X</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

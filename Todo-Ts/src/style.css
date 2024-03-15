@@ -1,0 +1,72 @@
+body {
+  background-color: #454545;
+  color: white;
+}
+
+.container {
+  max-width: 700px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  margin: 0 auto;
+}
+
+.todo-form {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.todo-form > input {
+  padding: 1rem;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  background-color: antiquewhite;
+  color: black;
+  width: 100%;
+}
+
+.todo-form > button {
+  width: 100px;
+  background-color: rgb(45, 151, 45);
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  color: white;
+  cursor: pointer;
+}
+
+.todo-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.todo {
+  display: flex;
+  background-color: black;
+  align-items: center;
+  padding: 10px;
+  gap: 1rem;
+  border-radius: 10px;
+  justify-content: space-between;
+  padding-inline: 1rem;
+}
+
+.todo > input {
+  height: 20px;
+  width: 20px;
+}
+
+.todo > button {
+  background-color: red;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  color: white;
+  cursor: pointer;
+  padding: 10px 18px;
+}
