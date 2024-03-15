@@ -411,15 +411,41 @@
 
 // ************************ Interface with Classes ***************************
 
-interface PersonInterface {
-  name: string;
-  age: number;
-  gender: string;
-}
+// interface PersonInterface {
+//   name: string;
+//   age: number;
+//   gender: string;
+// }
 
-class Person implements PersonInterface {
-  constructor(public name: string, public age: number, public gender: string) {}
-}
+// class Person implements PersonInterface {
+//   constructor(public name: string, public age: number, public gender: string) {}
+// }
 
-const arun = new Person("arun", 22, "male");
-arun.name, arun.gender;
+// const arun = new Person("arun", 22, "male");
+// arun.name, arun.gender;
+
+// ************************ Type Assertion ***************************
+
+// const btn = <HTMLElement> document.getElementById("btn");
+// const btn =  document.getElementById("btn") as HTMLElement
+// const btn =  document.getElementById("btn")!; // ! means absolutely not null
+
+// btn.addEventListener("click", () => {});
+// btn?.addEventListener("click", () => {});   // const btn = document.getElementById("btn");
+
+// type Person = {
+//   // [key: string]: string;  // Dynamic Property
+//   name: string;
+//   email: string;
+// };
+
+// const obj: Person = {
+//   name: "Arun",
+//   email: "arun@gmail.com",
+// };
+
+// const getData = (key: keyof Person): string => {
+//   return obj[key];
+// };
+
+// getData("name");
